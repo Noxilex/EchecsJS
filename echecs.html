@@ -37,19 +37,22 @@
       }
       Pawn.prototype = new Piece();
 
-      var createBoard = function(nbLine, nbColumn) // avec des pieces vide
-      var isEmpty = function(lig, col)
-      var put = function(lig, col, piece)
+      var createBoard = function(nbLine, nbColumn)
+      {
+      
+      }// avec des pieces vide
+      var isEmpty = function(lig, col);
+      var put = function(lig, col, piece);
 
       var board = createBoard(8, 8);
 
-      var initBoard = function() // avec les pièces du jeu
+      var initBoard = function(); // avec les pièces du jeu
 
       var convertCoordinates = function(ligPixel, colPixel) {
       var lig = Math.ceil(ligPixel / (canvas.height/8)) - 1;
       var col = Math.ceil(colPixel / (canvas.width /8)) - 1;
       return [lig, col];
-      }
+      };
 
       // liste des coordonnées des cellules libres accessibles par la pièce actuellement
       // sélectionnée par l'utilisateur
@@ -58,9 +61,9 @@
       // on prend la coordonnée de la cellule à dessiner et une couleur correspondant 
       // au carré dessiné dans la case si elle ne contient pas de pièce (gris si la 
       // case n'est pas sélectionnée pour représenter un déplacement valide et jaune sinon) 
-      // var drawCell = function(coord, color)
+      var drawCell = function(coord, color);
       
-      var highlight = function(on)
+      var highlight = function(on);
       
       canvas.addEventListener("mousedown", mouseClicked, false);
       //var mouseClicked = function(event) { // Pourquoi cela ne fonctionne pas avec var ?!
