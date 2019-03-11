@@ -1,26 +1,26 @@
 <html>
   <head>
     <script type='text/javascript'>
-      // On tente de charger l'image au plus tôt !
+      // On tente de charger l'image au plus tÃ´t !
       var chessSymbols = new Image();
       chessSymbols.src = 'chess.png';
       chessSymbols.onload = function() {
       console.info("Chess symbols loaded !");
-      // dessine la grille, une fois l'image chargée
+      // dessine la grille, une fois l'image chargÃ©e
       drawGrid(0,0, canvas.width, canvas.height, 8, 8); 
       };
     </script>
   </head>
   <body>
     <h1>Deep blue version JS</h1>
-    <center><canvas id='screen' width='400' height='400' >JavaScript est nécessaire ...</canvas></center>
+    <center><canvas id='screen' width='400' height='400' >JavaScript est nÃ©cessaire ...</canvas></center>
     <script type='text/javascript'>
 
       var canvas = document.getElementById("screen");
       var gfx    = canvas.getContext("2d");
 
       var Piece = function(name, color, line, column){
-      this.name    = name   || 'empty'; // si il n'y a pas de paramètre 'name', utiliser 'empty' 
+      this.name    = name   || 'empty'; // si il n'y a pas de paramÃ¨tre 'name', utiliser 'empty' 
       this.line    = line   || 0;
       this.column  = column || 0;
       this.color   = color  || 'grey';
@@ -46,7 +46,7 @@
 
       var board = createBoard(8, 8);
 
-      var initBoard = function(); // avec les pièces du jeu
+      var initBoard = function(); // avec les piÃ¨ces du jeu
 
       var convertCoordinates = function(ligPixel, colPixel) {
       var lig = Math.ceil(ligPixel / (canvas.height/8)) - 1;
@@ -54,13 +54,13 @@
       return [lig, col];
       };
 
-      // liste des coordonnées des cellules libres accessibles par la pièce actuellement
-      // sélectionnée par l'utilisateur
+      // liste des coordonnÃ©es des cellules libres accessibles par la piÃ¨ce actuellement
+      // sÃ©lectionnÃ©e par l'utilisateur
       var highlightedCells = [];
 
-      // on prend la coordonnée de la cellule à dessiner et une couleur correspondant 
-      // au carré dessiné dans la case si elle ne contient pas de pièce (gris si la 
-      // case n'est pas sélectionnée pour représenter un déplacement valide et jaune sinon) 
+      // on prend la coordonnÃ©e de la cellule Ã  dessiner et une couleur correspondant 
+      // au carrÃ© dessinÃ© dans la case si elle ne contient pas de piÃ¨ce (gris si la 
+      // case n'est pas sÃ©lectionnÃ©e pour reprÃ©senter un dÃ©placement valide et jaune sinon) 
       var drawCell = function(coord, color);
       
       var highlight = function(on);
@@ -87,12 +87,12 @@
       }
       }
 
-      // initialise le plateau en déposant les pièces de deux joueurs au début de la partie
+      // initialise le plateau en dÃ©posant les piÃ¨ces de deux joueurs au dÃ©but de la partie
       initBoard();
 
-      // Pour dessiner le plateau, on spécifie le coin supérieur gauche, la 
+      // Pour dessiner le plateau, on spÃ©cifie le coin supÃ©rieur gauche, la 
       // largeur et la hauteur. Dans cette fonction, on appelle drawCell 
-      // pour dessiner une cellule à une coordonnée donnée.
+      // pour dessiner une cellule Ã  une coordonnÃ©e donnÃ©e.
       var drawGrid = function(x, y, width, height, nbLig, nbCol) {
 
     </script>
