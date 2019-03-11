@@ -1,6 +1,5 @@
-# ECHECS JS
+# Echecs JS
+Creating a chess game for the browser
 
-Creating a js chess game
-
-## Current state
-Not working 
+## Current state
+Not working
